@@ -1,0 +1,9 @@
+{
+  "name": "worker-fullstack",
+  "main": "./src/server/index.ts",
+  "compatibility_date": "2025-10-03",
+  "assets": {
+    "directory": "./dist/client",
+    "binding": "ASSETS"
+  }
+}
