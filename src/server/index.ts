@@ -1,5 +1,4 @@
 import { Hono } from 'hono';
-import { serveStatic } from 'hono/cloudflare-workers';
 
 const app = new Hono();
 
@@ -11,8 +10,5 @@ app.get('/api/health', (c) => {
 app.get('/api/hello', (c) => {
   return c.json({ message: 'Hello from Hono!' });
 });
-
-// Serve static files (React build)
-app.get('*', serveStatic({ root: './' }));
 
 export default app;
